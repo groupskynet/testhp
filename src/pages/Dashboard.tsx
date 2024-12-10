@@ -1,7 +1,15 @@
+import MovieSearch from '../components/MovieSearch';
+import Navbar from '../components/Navbar';
+
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
-  )
-}
+    <div className="min-h-screen bg-gray-900">
+      <Navbar />
+      <main className="pt-6">
+        <MovieSearch />
+      </main>
+    </div>
+  );
+};
 
-export default Dashboard
+export default Dashboard;

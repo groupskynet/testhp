@@ -1,7 +1,8 @@
-export const PublicRoutes = {
-   LOGIN : 'login'
+export enum PublicRoutes {
+  LOGIN = 'login',
+  REGISTER = 'register'
 }
 
-export const PrivateRoutes = {
-  DASHBOARD: 'dashboard'
+export enum PrivateRoutes {
+  DASHBOARD = 'dashboard'
 }
