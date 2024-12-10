@@ -1,50 +1,99 @@
-# React + TypeScript + Vite
+# Movie Search App 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web moderna construida con React, TypeScript y Vite que permite buscar y filtrar películas utilizando la API de OMDB.
 
-Currently, two official plugins are available:
+## 🚀 Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Búsqueda de películas en tiempo real
+- Filtrado por tipo (películas, series, episodios)
+- Filtrado por rango de años
+- Autenticación de usuarios con Firebase
+- Diseño responsive con Tailwind CSS
+- Validación de formularios con Formik y Yup
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías Principales
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React 18
+- TypeScript
+- Vite
+- Firebase Authentication
+- Tailwind CSS
+- Formik + Yup
+- Zustand
 
-- Configure the top-level `parserOptions` property like this:
+## 📋 Prerrequisitos
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Node.js (versión 16 o superior)
+- npm o yarn
+- Una cuenta en Firebase
+- Una API key de OMDB (http://www.omdbapi.com/)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🔧 Instalación y Configuración
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/movie-search-app.git
+   cd movie-search-app
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   # o
+   yarn install
+   ```
+
+3. Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
+   ```
+   VITE_OMDB_API_KEY=tu_api_key_de_omdb
+   ```
+
+4. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   # o
+   yarn dev
+   ```
+
+5. Abre tu navegador y visita `http://localhost:5173`
+
+## 🚀 Scripts Disponibles
+
+- `npm run dev`: Inicia el servidor de desarrollo
+- `npm run build`: Genera la versión de producción
+- `npm run preview`: Previsualiza la versión de producción
+- `npm run lint`: Ejecuta el linter
+- `npm run test`: Ejecuta los tests
+
+## 📦 Estructura del Proyecto
+
+src/
+├── components/ # Componentes reutilizables
+├── models/ # Interfaces y tipos
+├── pages/ # Componentes de página
+├── providers/ # Contextos y providers
+├── services/ # Servicios y lógica de negocio
+├── store/ # Estado global (Zustand)
+├── utils/ # Utilidades y helpers
+└── firebase/ # Configuración de Firebase
+
+## 🔐 Autenticación
+
+La aplicación utiliza Firebase Authentication para manejar el registro y login de usuarios. Las características incluyen:
+
+- Registro con email y contraseña
+- Login con email y contraseña
+- Rutas protegidas
+- Persistencia de sesión
+
+## 🎨 Estilos
+
+El proyecto utiliza Tailwind CSS para los estilos, con un tema personalizado definido en `tailwind.config.js`. Los colores principales y otros estilos pueden ser modificados en este archivo.
+
+## 🤝 Contribuir
+
+Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir los cambios que te gustaría realizar.
+
+## 📝 Licencia
+
+[MIT](LICENSE)
